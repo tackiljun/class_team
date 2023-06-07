@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.annotation.Commit;
 import org.springframework.transaction.annotation.Transactional;
 import org.zerock.bj2.dto.TodoDTO;
 
@@ -16,7 +17,9 @@ public class TodoMapperTests {
   @Autowired(required = false)
   private TodoMapper todoMapper;
 
+
   @Transactional
+  @Commit
   @Test
   public void testInsert(){
 
