@@ -1,6 +1,9 @@
 package org.zerock.bj2;
 
 import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,14 +40,47 @@ class Bj2ApplicationTests {
 	@Test
 	public void testConnection(){
 
-		try( java.sql.Connection con = dataSource.getConnection()  ){
+		log.info("Test........................");
+		// long start = System.currentTimeMillis();
+		// for (int i = 0; i < 500; i++) {
 
-			log.info(con);
+		// 	try( java.sql.Connection con = dataSource.getConnection();){
 
-		}catch(Exception e){
-			e.printStackTrace();
-		}
+		// 		log.info(con);
+				
+		// 		con.close();
+		// 	}catch(Exception e){
+		// 		e.printStackTrace();
+		// 	}
+		// }
+		// long end = System.currentTimeMillis();
+
+		// log.info("==============================");
+		// log.info("TIME: " + (end - start));
+	}
+	@Test
+	public void testConnectionManually()throws Exception{
+
+
+		log.info("Test Connection");
+		// Class.forName("com.mysql.cj.jdbc.Driver");
+
+		// long start = System.currentTimeMillis();
+		// for (int i = 0; i < 500; i++) {
+
+		// 	try( java.sql.Connection con = DriverManager.getConnection("jdbc:mysql://localhost/webdb?serverTimezone=UTC", "webuser", "webuser")
+		// 	 ){
+
+		// 		log.info(con);
+			
+		// 	}catch(Exception e){
+		// 		e.printStackTrace();
+		// 	}		
+		// }
+		// long end = System.currentTimeMillis();
+
+		// log.info("==============================");
+		// log.info("TIME: " + (end - start));
 
 	}
-
 }
