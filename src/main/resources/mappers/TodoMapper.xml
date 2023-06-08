@@ -18,7 +18,7 @@
 select * from tbl_todo 
 where tno > 0 
 order by tno desc 
-limit #{skip}, #{end}
+limit #{skip}, #{size}
 </select>
 
 <select id="listCount" resultType="long">
