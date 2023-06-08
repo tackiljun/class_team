@@ -5,8 +5,8 @@ build/
 !**/src/main/**/build/
 !**/src/test/**/build/
 
-!**/src/main/**/dist/
-!**/src/main/**/plugins/
+**/src/main/**/dist/
+**/src/main/**/plugins/
 
 ### STS ###
 .apt_generated
