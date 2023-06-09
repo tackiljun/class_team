@@ -29,7 +29,7 @@ public class PageRequestDTO {
     }
   }
   public void setSize(int size){
-    if(size > 100 || size < 0){
+    if(size > 10 * size || size < 0){
       this.size = 10;
     }else {
       this.size = size;
